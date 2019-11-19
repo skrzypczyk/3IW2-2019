@@ -55,11 +55,3 @@ if( !empty($listOfRoutes[$uri]) ){
 
 
 
-
-
-
-
-
-
-
-	

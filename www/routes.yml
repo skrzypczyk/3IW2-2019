@@ -2,6 +2,10 @@
   controller: Default
   action: default
 
+/toto/test:
+  controller: Default
+  action: default
+
 
 /ajout-utilisateur:
   controller: User
