@@ -2,9 +2,18 @@
   controller: Default
   action: default
 
-/toto/test:
-  controller: Default
-  action: default
+
+/se-connecter:
+  controller: User
+  action: login
+
+/s-inscrire:
+  controller: User
+  action: register
+
+/mot-de-passe-oublie:
+  controller: User
+  action: forgotPwd
 
 
 /ajout-utilisateur:

@@ -10,8 +10,14 @@ class UserController{
 	}
 	
 
-	public function listAction(){
-		echo "Félicitations vous avez compris !!!";
+	public function loginAction(){
+		$myView = new View("login", "account");
+	}
+	public function registerAction(){
+		$myView = new View("register", "account");	
+	}
+	public function forgotPwdAction(){
+		$myView = new View("forgotPwd", "account");	
 	}
 
 }
