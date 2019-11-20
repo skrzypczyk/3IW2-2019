@@ -10,9 +10,7 @@ class helpers{
 
 			if($values["controller"]==$controller && $values["action"]==$action){
 				return $url;
-
 			}
-
 		}
 		return "/";
 	}

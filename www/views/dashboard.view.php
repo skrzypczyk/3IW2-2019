@@ -1,7 +1,7 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <h1 class="h3 mb-0 text-gray-800">Dashboard de <?= $name;?> </h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
 
@@ -269,8 +269,30 @@
                   <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
                 </div>
                 <div class="card-body">
-                  <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
-                  <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
+                 
+
+                  <?php 
+                  $data = [
+                            "images" => [
+                              
+                              "https://media-cdn.tripadvisor.com/media/photo-s/0a/7b/5e/bf/passion-montagne.jpg",
+
+                              "https://www.wlaps.com/wp-content/uploads/2016/02/2-belle-plage-des-salines-grande-terre-guadeloupe.jpg",
+
+                              "https://pbs.twimg.com/profile_images/755751459455729665/PfaxPdZY.jpg"],
+
+
+
+                            "text" =>[
+                                "Super montagne", 
+                                "Super plage", 
+                                "Super école"]
+                          ];
+                  ?>
+
+
+                 <?php $this->addModal("carousel", $data)?>
+
                 </div>
               </div>
 

@@ -3,6 +3,8 @@ class View{
 
 	private $view;
 	private $template;
+	private $data = [];
+
 
 	public function __construct($view, $template="back"){
 		$this->setTemplate($template);
@@ -28,7 +30,25 @@ class View{
 	}
 
 
+	public function assign($key, $value){
+		$this->data[$key] = $value;
+	}
+
+	public function addModal($modal, $data){
+
+		if( !file_exists("views/modals/".$modal.".mod.php")){
+			die("Le modal ".$modal." n'existe pas");
+		}
+
+		include "views/modals/".$modal.".mod.php";
+
+	}
+
+
 	public function __destruct(){
+		// $this->data -> ["name"=>"yves"];
+		//$name = "yves"
+		extract($this->data);
 		include "views/templates/".$this->template.".tpl.php";
 	}
 
