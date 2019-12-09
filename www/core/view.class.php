@@ -46,7 +46,7 @@ class View{
 
 
 	public function __destruct(){
-		// $this->data -> ["name"=>"yves"];
+		// $this->data = ["name"=>"yves"];
 		//$name = "yves"
 		extract($this->data);
 		include "views/templates/".$this->template.".tpl.php";
