@@ -2,29 +2,46 @@
 class DB{
 
 	private $table;
+	private $pdo;
 
 	//SINGLETON
 	public function __construct(){
 
 		try{
 
-			$pdo = new PDO(DRIVER_DB.":host=".HOST_DB.";dbname=".NAME_DB , USER_DB , PWD_DB);
+			$this->pdo = new PDO(DRIVER_DB.":host=".HOST_DB.";dbname=".NAME_DB , USER_DB , PWD_DB);
 
 		}catch(Exception $e){
 			die("Erreur SQL : ".$e->getMessage());
 		}
 
 		//A completer
-		$this->table = get_called_class();
+		$this->table = PREFIXE_DB.get_called_class();
 
 	}
 
 
 	public function save(){
 
-		$sql = "INSERT INTO ".$this->table." (firstname, lastname, email, pwd, status) VALUES ("Yves", "SKRZYPCZYK", "y.skrzypczyk@gmail.com", "Test1234", 0);"
+		$objectVars = get_object_vars($this);
+		$classVars = get_class_vars(get_class());
+		$columsData = array_diff_key($objectVars, $classVars);
+		$colums = array_keys($columsData);
 
-		echo $sql;
+		if( !is_numeric($this->id) ){
+			//INSERT
+			$sql = "INSERT INTO ".$this->table." (".implode(",", $colums).") VALUES (:".implode(",:", $colums).");";
+
+			echo $sql;
+			print_r($columsData);
+			$queryPrepared = $this->pdo->prepare($sql);
+			$queryPrepared->execute($columsData);
+
+		}else{
+			//UPDATE
+
+		}
+
 
 	}
 }

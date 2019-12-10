@@ -1,12 +1,12 @@
 <?php
 class users extends DB{
 
-	private $id;
-	private $firstname;
-	private $lastname;	
-	private $email;
-	private $pwd;
-	private $status;
+	protected $id=null;
+	protected $firstname;
+	protected $lastname;	
+	protected $email;
+	protected $pwd;
+	protected $status;
 
 	public function __construct(){
 
