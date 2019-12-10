@@ -15,13 +15,19 @@ class DB{
 		}
 
 		//A completer
-		//$this->table = ????;
+		$this->table = get_called_class();
 
 	}
 
 
 	public function save(){
 
+		$sql = "INSERT INTO ".$this->table." (firstname, lastname, email, pwd, status) VALUES ("Yves", "SKRZYPCZYK", "y.skrzypczyk@gmail.com", "Test1234", 0);"
+
+		echo $sql;
 
 	}
 }
+
+
+
