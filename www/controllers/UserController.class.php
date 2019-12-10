@@ -17,12 +17,8 @@ class UserController{
 
 
 		$user = new users();
-		$user->setFirstname("yves");
-		$user->setLastname("Skrzypczyk");
-		$user->setEmail("y.Skrzypczyk@gmail.com");
-		$user->setPwd("Test1234");
-		$user->setStatus(0);
-	
+		$user->setId(1);
+		$user->setFirstname("Yves");
 		$user->save();
 
 

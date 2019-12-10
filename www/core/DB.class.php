@@ -32,16 +32,16 @@ class DB{
 			//INSERT
 			$sql = "INSERT INTO ".$this->table." (".implode(",", $colums).") VALUES (:".implode(",:", $colums).");";
 
-			echo $sql;
-			print_r($columsData);
-			$queryPrepared = $this->pdo->prepare($sql);
-			$queryPrepared->execute($columsData);
-
 		}else{
 			//UPDATE
-
+			foreach ($colums as $colum) {
+				$sqlUpdate[] =  $colum."=:".$colum;
+			}
+			$sql = "UPDATE ".$this->table." SET ".implode(",", $sqlUpdate)." WHERE id=:id;";
 		}
 
+		$queryPrepared = $this->pdo->prepare($sql);
+		$queryPrepared->execute($columsData);
 
 	}
 }
