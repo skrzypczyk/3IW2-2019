@@ -271,7 +271,7 @@
                 <div class="card-body">
                  
 
-                  <?php 
+                  <?php
                   $data = [
                             "images" => [
                               
@@ -284,8 +284,8 @@
 
 
                             "text" =>[
-                                "Super montagne", 
-                                "Super plage", 
+                                "Super montagne",
+                                "Super plage",
                                 "Super école"]
                           ];
                   ?>
