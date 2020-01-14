@@ -94,7 +94,6 @@ class users extends DB
                                 "captcha"=>[
                                                 "type"=>"captcha",
                                                 "required"=>true,
-                                                "placeholder"=>"Saisir le texte",
                                                 "class"=>"",
                                                 "id"=>""
                                             ]
