@@ -9,6 +9,11 @@
               <div class="text-center">
                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
               </div>
+              
+
+           <?php $this->addModal("form", users::getRegisterForm())?>
+
+          <!--
               <form class="user">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
@@ -40,6 +45,9 @@
                   <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
                 </a>
               </form>
+            -->
+
+
               <hr>
               <div class="text-center">
                 <a class="small" href="forgot-password.html">Forgot Password?</a>
