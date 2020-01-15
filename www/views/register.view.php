@@ -11,7 +11,7 @@
               </div>
               
 
-           <?php $this->addModal("form", users::getRegisterForm())?>
+           <?php $this->addModal("form", $configForm )?>
 
           <!--
               <form class="user">

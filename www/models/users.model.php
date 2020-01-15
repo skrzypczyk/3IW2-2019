@@ -59,43 +59,54 @@ class users extends DB
                                                 "type"=>"text",
                                                 "required"=>true,
                                                 "placeholder"=>"Votre prénom",
-                                                "class"=>"",
-                                                "id"=>""
+                                                "class"=>"form-control",
+                                                "id"=>"",
+                                                "minlength"=>2,
+                                                "maxlength"=>50,
+                                                "errMsg"=>"Votre prénom doit faire entre 2 et 50 caractères"
                                             ],
                                 "lastname"=>[
                                                 "type"=>"text",
                                                 "required"=>true,
                                                 "placeholder"=>"Votre nom",
-                                                "class"=>"",
-                                                "id"=>""
+                                                "class"=>"form-control",
+                                                "id"=>"",
+                                                "minlength"=>2,
+                                                "maxlength"=>100,
+                                                "errMsg"=>"Votre nom doit faire entre 2 et 100 caractères"
                                             ],
                                 "email"=>[
                                                 "type"=>"email",
                                                 "required"=>true,
                                                 "placeholder"=>"Votre email",
-                                                "class"=>"",
-                                                "id"=>""
+                                                "class"=>"form-control",
+                                                "id"=>"",
+                                                "errMsg"=>"Votre email est incorrect"
                                             ],
                                 "password"=>[
                                                 "type"=>"password",
                                                 "required"=>true,
                                                 "placeholder"=>"Votre mot de passe",
-                                                "class"=>"",
-                                                "id"=>""
+                                                "class"=>"form-control",
+                                                "id"=>"",
+                                                "errMsg"=>"Votre mot de passe doit contenir une majuscule et une minuscule avec au moins 8 caractères"
                                             ],
                                 "passwordConfirm"=>[
                                                 "type"=>"password",
                                                 "required"=>true,
                                                 "placeholder"=>"Confirmer le mot de passe",
-                                                "class"=>"",
+                                                "class"=>"form-control",
                                                 "id"=>"",
-                                                "confirmWith"=>"password"
+                                                "confirmWith"=>"password",
+                                                "errMsg"=>"Votre confirmation de mot de passe ne correspond pas"
                                             ],
                                 "captcha"=>[
                                                 "type"=>"captcha",
                                                 "required"=>true,
-                                                "class"=>"",
-                                                "id"=>""
+                                                "class"=>"form-control",
+                                                "id"=>"",
+                                                "placeholder"=>"Veuillez saisir le captcha",
+                                                "errMsg"=>"Le captcha est incorrect"
                                             ]
 
                               ]
